@@ -49,7 +49,7 @@ const LandingSection = () => {
       firstName: Yup.string().required("Please enter your name"),
       email:Yup.string().email("Enter a valid Email Address").required("Enter a valid Email Address"),
       type: Yup.string().required("Please choose an option"),
-      comment: Yup.string().required("Please fill the comment section before submitting"),
+      comment: Yup.string().required("Please fill the comment section before submitting").min(20, "Please use a minimum of 20 characters for your comment"),
     }),
   });
 
