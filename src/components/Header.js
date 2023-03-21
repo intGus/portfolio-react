@@ -42,27 +42,26 @@ const Header = () => {
   };
   
   const [translate, setTranslate] = useState(0);
-  const [prevScrollPos, setPreviousScrollPos] = useState(0);
 
   useEffect(() => {
+    let prevScrollPos = window.scrollY;
+
     function handleScroll() {
-      const currentScrollPos = window.pageYOffset;
+      const currentScrollPos = window.scrollY;
 
       if (currentScrollPos > prevScrollPos) {
         setTranslate(-200);
-      } else if (currentScrollPos < prevScrollPos) {
+      } else {
         setTranslate(0);
       }
-
-      setPreviousScrollPos(currentScrollPos);
+      prevScrollPos = currentScrollPos
     }
-
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [prevScrollPos]);
+  }, []);
 
   return (
 
