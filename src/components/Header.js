@@ -5,13 +5,13 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faLinkedin,
-  faStackOverflow,
-  faFacebook,
+  // faStackOverflow,
+  faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 const socials = [
   {
-    icon: faEnvelope,
-    url: "mailto: fake@fake.com",
+    // icon: faEnvelope,
+    // url: "mailto: fake@fake.com",
   },
   {
     icon: faGithub,
@@ -19,11 +19,11 @@ const socials = [
   },
   {
     icon: faLinkedin,
-    url: "https://www.linkedin.com/",
+    url: "https://www.linkedin.com/in/agustavodiaz/",
   },
   {
-    icon: faFacebook,
-    url: "https://www.facebook.com/",
+    icon: faTwitter,
+    url: "https://twitter.com/Gus_Visuals",
   },
 
 ];
@@ -90,7 +90,7 @@ const Header = () => {
           </nav>
           <nav>
             <HStack spacing={5} >
-              <a href="#contactme-section" onClick={handleClick}> <Text>Contact Me</Text> </a>
+              {/* <a href="#contactme-section" onClick={handleClick}> <Text>Contact Me</Text> </a> */}
               <a href="#projects-section" onClick={handleClick}><Text>Projects</Text></a>
             </HStack>
           </nav>
