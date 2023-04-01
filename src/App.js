@@ -15,9 +15,9 @@ function App() {
           <Header />
           <LandingSection />
           <ProjectsSection />
-          <ContactMeSection />
+          {/* <ContactMeSection /> */}
           <Footer />
-          <Alert />
+          {/* <Alert /> */}
         </main>
       </AlertProvider>
     </ChakraProvider>
